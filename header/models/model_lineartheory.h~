@@ -1,0 +1,19 @@
+#ifndef _MODEL_LINEARTHEORY_H_
+#define _MODEL_LINEARTHEORY_H_
+
+#include <string>
+
+#include "../matrixhandler.h"
+
+class Model_LinearTheory
+{
+private:
+
+public:
+	Model_LinearTheory();
+	virtual ~Model_LinearTheory();
+
+	bool step(int p_StepLength, MatrixHandler* p_Matrix);
+};
+
+#endif

@@ -1,0 +1,10 @@
+#include "../header/component.h"
+
+using namespace std;
+
+Component::Component() {
+
+}
+
+Component::~Component() {
+}

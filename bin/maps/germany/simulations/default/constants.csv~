@@ -1,0 +1,28 @@
+' DHEMOS ARCHITECTURE MATRIX
+0,0,1
+0,0,0
+0,0,1
+
+' GLOBAL SIMULATION VALUES
+' Simulation length, Step length, Log frequency
+1,60,1
+
+' OUTDOOR MODEL
+
+
+
+' SIMULATION
+'Mode, Step length, Log frequency, Simulation length
+'1,60,1,1,5,20
+'
+' DISTRIBUTION 
+'Model, CP, Gravity, Density, Kinematic viscosity, Pipe roughness, Intial water temperature, Still water limit
+'1,4180000.0,9.82,980.0,0.000000264,0.0001,75.0,0.01
+'
+' CONSUMPTION
+'Model
+'1
+'
+' PRODUCTION
+'model,
+

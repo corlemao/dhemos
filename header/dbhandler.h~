@@ -1,0 +1,44 @@
+#ifndef _DBHANDLER_H_
+#define _DBHANDLER_H_
+
+#include <string>
+
+#include "matrixhandler.h"
+
+class DBHandler
+{
+private:
+
+public:
+	DBHandler();
+	virtual ~DBHandler();
+
+	bool connectDB(); 
+
+	bool loadMatrix(MatrixHandler* p);
+	
+	bool step(int p_SimulationStep, MatrixHandler* p_Matrix);
+	
+	// Simulation preferences
+	int getStepLength();
+	int getLogFrequency();
+	int getSimulationLength();
+	
+	// Model preferences
+	int getErrorMargin();
+	int getIterationLoops();
+	int getMathModel();
+	
+	// Matrix preferences
+	float getCP();
+	float getGravity();
+	float getWaterDensity();
+	float getInitialWaterTemperature();
+	float getStillWaterLimit();
+	float getPipeUnitLength();
+	
+	// AgentHandler preferences
+	int getAgentID();
+};
+
+#endif

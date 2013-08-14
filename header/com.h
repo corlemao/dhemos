@@ -1,0 +1,82 @@
+#ifndef _COM_H_
+#define _COM_H_
+
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <octave/oct.h>
+#include <sys/stat.h>
+
+class Com
+{
+private:
+	bool m_bDebug;
+	bool m_bAgentActive;
+	std::string m_sMapID;
+	std::string m_sSimID;
+	std::string m_sLogDir;
+	
+	std::vector<float> m_vModelValues;
+	
+	float m_fCP;
+	float m_fGravity;
+	float m_fWaterDensity;
+	float m_fKinematicViscosity;
+	float m_fPipeRoughness;
+	float m_fInitialWaterTemperature;
+	float m_fStillWaterLimit;
+
+	int m_iStepLength;
+	int m_iLogFrequency;
+	int m_iSimulationLength;
+	int m_iErrorMargin;
+	int m_iIterationLoops;
+	int m_iModel;
+	int m_iOutdoorModel;
+	
+	
+public:
+	Com();
+	virtual ~Com();
+
+	bool connectDB(bool pDebug, const std::string& p_mapID, const std::string& p_simID);
+	bool disconnectDB();
+	bool isDebug(){return m_bDebug;};
+	bool logSimulationTime(int pTimeInSeconds);
+	bool readSim();
+	bool readModel();
+	bool log(Matrix pLogMatrix);
+	bool logFolder();
+	
+	float getModelValue(int pPos);
+	
+	float getCP();
+	float getGravity();
+	float getWaterDensity();
+	float getKinematicViscosity();
+	float getPi();
+	float getPipeRoughness();
+	bool getDebug();
+	const std::string& getMapID();
+	const std::string& getSimID();
+
+	bool isAgentActive();
+	Matrix createComponents();
+
+	int getModel();
+	int getOutdoorModel();
+	int getStepLength();
+	int getLogFrequency();
+	int getSimulationLength();
+	int getErrorMargin();
+	int getIterationLoops();
+
+	float getInitialWaterTemperature();
+	float getStillWaterLimit();
+	float getPipeUnitLength();
+
+	int getAgentID();
+};
+
+#endif

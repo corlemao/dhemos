@@ -1,0 +1,84 @@
+#ifndef _MODEL_SPECIALCASE_H_
+#define _MODEL_SPECIALCASE_H_
+
+#include <string>
+#include <time.h>
+#include <cmath>
+#include <octave/oct.h>
+#include <vector>
+#include <functional>
+#include <iostream>
+#include <fstream>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+#include "../defs.h"
+#include "../com.h"
+#include "../agenthandler.h"
+#include "../systemfunctions.h"
+
+class Model_SpecialCase
+{
+private:
+	// model value positions
+	int CP;
+	int GRAVITY;
+	int DENSITY;
+	int KINEMATICVISCOSITY;
+	int PIPEROUGHNESS;
+	int INTIALWATERTEMPERATURE;
+	int STILLWATERLIMIT;
+	int PIPUNITLENGTH;
+	int AGENTACTIVE;
+	
+	int m_iSimulationLength;
+	int m_iStepLength;
+	int m_iNrOfPipes;
+	int m_iPipePos;
+	int m_iLinkConsumerPos;
+	int m_iLinkConsumerNr;
+	int m_iTreeSize;
+	int m_iComponentsSize;
+	
+	bool m_bAgentActive;
+	bool m_bHourMode;
+	
+	std::string m_sDir;
+	std::string m_sEventpath;
+	
+	Com* m_pCom;
+	AgentHandler* m_pAgentHandler;
+	SystemFunctions* m_pSystemFunctions;
+	
+	Matrix m_mComponents;
+	Matrix m_mTempList;
+	Matrix m_mGlobal;
+	Matrix m_mA;
+	Matrix m_mAT;
+	Matrix m_mD;
+	Matrix m_mDL;
+	Matrix m_mF11;
+	Matrix m_mF41;
+	Matrix m_mMML;
+	Matrix m_mHHT;
+	Matrix m_mMHT;
+
+	void updateEvents(int p_step);
+	void stepAgent(int p_step);
+	void updateBoundaries();
+	void updateTempList();
+	float headloss(int p_pos);
+	float calculateStochasticLoad();
+	
+public:
+	Model_SpecialCase();
+	virtual ~Model_SpecialCase();
+	
+	bool run(Com* pCom);
+	bool initiate();
+	void preStep(int p_step);
+	void step();
+	void postStep(int p_step);
+};
+
+#endif

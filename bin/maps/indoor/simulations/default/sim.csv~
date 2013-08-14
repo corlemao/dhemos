@@ -1,0 +1,20 @@
+''''''''''''''''''''''
+' DHEMOS MODEL
+'''''''''''''''''''''''
+3 
+'''''''''''''''''''''''
+' OUTDOOR MODEL
+'''''''''''''''''''''''
+1
+''''''''''''''''''''''''''
+' GLOBAL SIMULATION VALUES
+''''''''''''''''''''''''
+' Simulation length
+744
+' step length
+60
+' log frequency
+1
+
+
+

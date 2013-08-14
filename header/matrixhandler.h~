@@ -1,0 +1,30 @@
+#ifndef _MATRIXHANDLER_H_
+#define _MATRIXHANDLER_H_
+
+#include <string>
+#include <iostream>
+#include <octave/oct.h>
+
+class MatrixHandler 
+{
+private:
+	
+public:
+	MatrixHandler();
+	virtual ~MatrixHandler();	
+	
+	Matrix m_mComponents;
+	Matrix m_mGlobal;
+	Matrix m_mMML;
+	Matrix m_mHHT;
+	Matrix m_mA;
+	Matrix m_mAT;
+	Matrix m_mDL;
+	Matrix m_mD;
+	Matrix m_mF11;
+	Matrix m_mF41;
+	
+	
+};
+
+#endif

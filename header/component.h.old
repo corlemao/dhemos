@@ -1,0 +1,16 @@
+#ifndef _COMPONENT_H_
+#define _COMPONENT_H_
+
+#include <string>
+
+class Component
+{
+private:
+
+public:
+	Component();
+	virtual ~Component();
+
+};
+
+#endif

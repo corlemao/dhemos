@@ -1,0 +1,11 @@
+' SIMULATION
+'Mode, Step length, Log frequency, Simulation length, error margin, max iterations
+'1,60,1,1,5,20
+'
+' DISTRIBUTION 
+'Model, CP, Gravity, Density, Kinematic viscosity, Pipe roughness, Intial water temperature, Still water limit
+'1,4180000.0,9.82,980.0,0.000000264,0.0001,75.0,0.01
+'
+' containst values relating to the model used
+'
+

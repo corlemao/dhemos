@@ -1,0 +1,25 @@
+'''''''''''''''''''''''''''''''''''
+' model file for special case
+' value in paranthesis shows the position in the resulting vector 
+'''''''''''''''''''''''''''''''''
+'
+' (0) model identification number
+1
+' (1) cp, based on flow unit of m³ (where m³ equals 1000kg)
+4180000.0
+' (2) gravity
+9.82
+' (3) density 
+980.0
+' (4) kinematic viscosity
+0.000000264
+' (5) pipe roughness
+0.0001
+' (6) initial water temperature
+75.0
+' (7) still water limit
+0.01
+' (8) pipe unit length [m]
+1.0
+' (9) agent active [bool] 
+0

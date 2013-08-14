@@ -1,0 +1,17 @@
+#ifndef _SPECIALCASE_H_
+#define _SPECIALCASE_H_
+
+#include <string>
+
+#include "matrix.h"
+
+class Model_SpecialCase
+{
+private:
+
+public:
+	Model_SpecialCase();
+	virtual ~Model_SpecialCase();
+};
+
+#endif

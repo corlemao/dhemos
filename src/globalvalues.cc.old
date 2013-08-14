@@ -1,0 +1,10 @@
+#include "../header/globalvalues.h"
+
+using namespace std;
+
+GlobalValues::GlobalValues() {
+
+}
+
+GlobalValues::~GlobalValues() {
+}

@@ -1,0 +1,18 @@
+#ifndef _GLOBALVALUES_H_
+#define _GLOBALVALUES_H_
+
+#include <string>
+
+class GlobalValues
+{
+private:
+
+public:
+	GlobalValues();
+	virtual ~GlobalValues();
+
+
+	float m_fTout;
+};
+
+#endif
